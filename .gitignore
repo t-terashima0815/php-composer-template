@@ -1,1 +1,6 @@
+/.phpdoc/
+/.phpunit.cache/
+/coverage-html/
+/tools/
 /vendor/
+.phpunit.result.cache

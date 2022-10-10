@@ -7,11 +7,42 @@
             "Vendor\\Name\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Vendor\\Name\\Test\\Unit\\": "tests/unit",
+            "Vendor\\Name\\Test\\Feature\\": "tests/feature"
+        }
+    },
     "authors": [
         {
             "name": "tterashima",
             "email": "taira.terashima@gmail.com"
         }
     ],
-    "require": {}
+    "scripts": {
+        "build": [
+            "@composer lint",
+            "@composer test",
+            "@composer analyse"
+        ],
+        "test:unit": "phpunit -c phpunit.xml.dist --testsuite unit",
+        "test:feature": "phpunit -c phpunit.xml.dist --testsuite feature",
+        "test": "phpunit -c phpunit.xml.dist",
+        "lint": "phplint",
+        "analyse:psalm": "psalm",
+        "analyse:phpstan": "phpstan",
+        "analyse": [
+            "@composer analyse:phpstan",
+            "@composer analyse:psalm"
+        ]
+    },
+    "require": {
+        "graywings/exceptions": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "overtrue/phplint": "^5.3",
+        "vimeo/psalm": "^4.28",
+        "phpstan/phpstan": "^1.8"
+    }
 }
