@@ -1,0 +1,17 @@
+{
+    "name": "vendor/name",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Name\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tterashima",
+            "email": "taira.terashima@gmail.com"
+        }
+    ],
+    "require": {}
+}
