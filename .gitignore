@@ -2,5 +2,6 @@
 /.phpunit.cache/
 /coverage-html/
 /tools/
+/build/
 /vendor/
 .phpunit.result.cache
